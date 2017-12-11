@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Cells on web-components(template)</title>
+
+</head>
+<body>
+    <div class="cells"> </div>
+
+    <template class="cells-template">
+        <link rel="stylesheet" href="cells.css">
+        <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    </template>
+
+    <script>
+        // получение шаблона
+        var template = document.querySelector(".cells-template");
+        // клонирование шаблона, true - глубокое клонирование всего содержимого шаблона
+        var templateClone = document.importNode(template.content, true);
+        // добавление содержимого шаблона в DOM дерево
+        document.body.appendChild(templateClone);
+    </script>
+    <script src="cells.js"></script>
+
+</body>
+
+</html>
+

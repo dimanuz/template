@@ -1,0 +1,96 @@
+:root {
+    --cells_padding: 55px;
+    --cells_size_td: 48px;
+    --cells_size_button: 50px;
+    --cells_table_color: #48aae7;
+
+    --cells_button_text_color: #ffffff;
+
+    --cells_add_button_color: #f3a500;
+    --cells_add_button_hover_color: #f6c052;
+
+    --cells_delete_button_color: #b20000;
+    --cells_delete_button_hover_color: #ca4c49;
+
+    --cells_transition_timeout: 300ms;
+    --cells_transition_ttf: ease;
+}
+
+.cells {
+    float: left;
+    position: relative;
+    padding: var(--cells_padding);
+}
+
+.cells__table {
+    left: 50px;
+    margin: 2px;
+    border: 1px solid var(--cells_table_color);
+}
+
+.cells__td {
+    background-color: var(--cells_table_color);
+    width: var(--cells_size_td);
+    height: var(--cells_size_td);
+    min-width: var(--cells_size_td);
+}
+
+.cells__buttons {
+    position: absolute;
+    width: var(--cells_size_button);
+    height: var(--cells_size_button);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: var(--cells_button_text_color);
+    transition: background-color var(--cells_transition_timeout) var(--cells_transition_ttf);
+}
+
+.cells__add_button {
+    font-family: FontAwesome;
+    background-color: var(--cells_add_button_color);
+    transition: background-color var(--cells_transition_timeout) var(--cells_transition_ttf);
+}
+
+.cells__delete_button {
+    background-color: var(--cells_delete_button_color);
+    visibility: hidden;
+    transition: background-color var(--cells_transition_timeout) var(--cells_transition_ttf),
+                visibility var(--cells_transition_timeout) var(--cells_transition_ttf),
+                left var(--cells_transition_timeout) var(--cells_transition_ttf),
+                top var(--cells_transition_timeout) var(--cells_transition_ttf);
+}
+
+.cells__add_row_button {
+    left: 60px;
+    bottom: 5px;
+}
+
+.cells__add_columm_button {
+    top: 60px;
+    right: 5px;
+}
+
+.cells__delete_column_button {
+    top: 5px;
+}
+
+.cells__delete_row_button {
+    left: 5px;
+}
+
+.cells__button-enabled {
+    visibility: visible;
+}
+
+.cells__delete_button:hover {
+    background-color: var(--cells_delete_button_hover_color);
+}
+
+.cells__add_button:hover {
+    background-color: var(--cells_add_button_hover_color);
+}
+
+
+
+
